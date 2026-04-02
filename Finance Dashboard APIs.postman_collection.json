@@ -72,7 +72,12 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"username\": \"analyst\",\r\n  \"password\": \"1234\",\r\n  \"role\": \"ANALYST\",\r\n  \"active\": true\r\n}"
+              "raw": "{\r\n  \"username\": \"analyst\",\r\n  \"password\": \"1234\",\r\n  \"role\": \"ANALYST\",\r\n  \"active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": {
               "raw": "http://localhost:8080/users",
@@ -602,6 +607,30 @@
           "response": []
         }
       ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
     }
   ]
 }

@@ -9,21 +9,21 @@ import java.util.Map;
 @Service
 public class DashboardService {
 
-	private final FinancialService service;
+    private final FinancialService service;
 
-	public DashboardService(FinancialService service) {
-		this.service = service;
-	}
+    public DashboardService(FinancialService service) {
+        this.service = service;
+    }
 
-	public Map<String, Object> getSummary() {
-		double income = service.totalByType(RecordType.INCOME);
-		double expense = service.totalByType(RecordType.EXPENSE);
+    public Map<String, Object> getSummary() {
+        double income = service.totalByType(RecordType.INCOME);
+        double expense = service.totalByType(RecordType.EXPENSE);
 
-		Map<String, Object> map = new HashMap<>();
-		map.put("totalIncome", income);
-		map.put("totalExpense", expense);
-		map.put("netBalance", income - expense);
+        Map<String, Object> map = new HashMap<>();
+        map.put("totalIncome", income);
+        map.put("totalExpense", expense);
+        map.put("netBalance", income - expense);
 
-		return map;
-	}
+        return map;
+    }
 }
